@@ -1,0 +1,1708 @@
+-- Created by Lite Mods
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
+local TextButton_7 = Instance.new("TextButton")
+local TextButton_8 = Instance.new("TextButton")
+local TextButton_9 = Instance.new("TextButton")
+local TextButton_10 = Instance.new("TextButton")
+local TextButton_11 = Instance.new("TextButton")
+local TextButton_12 = Instance.new("TextButton")
+local TextButton_13 = Instance.new("TextButton")
+local TextButton_14 = Instance.new("TextButton")
+local TextButton_15 = Instance.new("TextButton")
+local TextButton_16 = Instance.new("TextButton")
+local TextButton_17 = Instance.new("TextButton")
+local TextButton_18 = Instance.new("TextButton")
+local TextButton_19 = Instance.new("TextButton")
+local TextButton_20 = Instance.new("TextButton")
+local TextButton_21 = Instance.new("TextButton")
+local TextButton_22 = Instance.new("TextButton")
+local TextButton_23 = Instance.new("TextButton")
+local TextButton_24 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton_25 = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.42748493, 0, 0.123724498, 0)
+Frame.Size = UDim2.new(0, 423, 0, 619)
+Frame.Visible = true
+Frame.Active = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Size = UDim2.new(0, 423, 0, 50)
+TextLabel.Font = Enum.Font.Fantasy
+TextLabel.Text = "Prison Fucker X"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0, 0, 0.0807754472, 0)
+TextButton.Size = UDim2.new(0, 83, 0, 50)
+TextButton.Font = Enum.Font.Fantasy
+TextButton.Text = "Gun Mod"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+local reg = (getreg or debug.getregistry)
+local get = (debug.getupvalues or secret953)
+local client = game:GetService("Players").LocalPlayer
+local render = game:GetService('RunService').RenderStepped
+
+function start()
+local function fakeStats()
+function change(t)
+local myStats = {
+ReloadTime = 0,
+FireRate = 0,
+AutoFire = true,
+StoredAmmo = math.huge,
+MaxAmmo = math.huge,
+CurrentAmmo = math.huge,
+}
+
+for name, fake in next, myStats do
+t[name] = fake
+end
+end
+
+for k, v in next, reg() do
+if type(v) == "function" then
+local upvals = get(v)
+if upvals and upvals.GunStates then
+change(upvals.GunStates)
+end
+end
+end
+end
+
+client.Backpack.ChildAdded:connect(function(child)
+if child:IsA("Tool") and child:FindFirstChild("GunInterface") then
+client.Character.Humanoid:EquipTool(child)
+
+render:wait()
+fakeStats()
+render:wait()
+
+client.Character.Humanoid:UnequipTools()
+end
+end)
+
+for _, child in next, client.Backpack:GetChildren() do
+if child:IsA("Tool") and child:FindFirstChild("GunInterface") then
+client.Character.Humanoid:EquipTool(child)
+
+render:wait()
+fakeStats()
+render:wait()
+
+client.Character.Humanoid:UnequipTools()
+end
+end
+end
+
+start()
+
+client.CharacterAdded:connect(start)
+end)
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.Position = UDim2.new(0.217494085, 0, 0.0807754472, 0)
+TextButton_2.Size = UDim2.new(0, 73, 0, 50)
+TextButton_2.Font = Enum.Font.Fantasy
+TextButton_2.Text = "Inmate"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+TextButton_2.MouseButton1Down:connect(function()
+workspace.Remote.TeamEvent:FireServer("Bright orange")
+end)
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.Position = UDim2.new(0.411347508, 0, 0.0807754472, 0)
+TextButton_3.Size = UDim2.new(0, 77, 0, 50)
+TextButton_3.Font = Enum.Font.Fantasy
+TextButton_3.Text = "Neutral"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+TextButton_3.MouseButton1Down:connect(function()
+Workspace.Remote.TeamEvent:FireServer("Medium stone grey")
+end)
+
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.Position = UDim2.new(0.607564986, 0, 0.0807754472, 0)
+TextButton_4.Size = UDim2.new(0, 62, 0, 50)
+TextButton_4.Font = Enum.Font.Fantasy
+TextButton_4.Text = "Arrest Crims"
+TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+TextButton_4.MouseButton1Down:connect(function()
+local Player = game.Players.LocalPlayer
+local cpos = Player.Character.HumanoidRootPart.CFrame
+for i,v in pairs(game.Teams.Criminals:GetPlayers()) do
+if v.Name ~= Player.Name then
+local i = 10
+    repeat
+    wait()
+    i = i-1
+    game.Workspace.Remote.arrest:InvokeServer(v.Character.HumanoidRootPart)
+    Player.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 1)
+    until i == 0
+end
+end
+Player.Character.HumanoidRootPart.CFrame = cpos
+Notify("Success", "Arrested all of the n00bs", "Cool!")
+end)
+
+TextButton_5.Parent = Frame
+TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.Position = UDim2.new(0.770685554, 0, 0.0807754472, 0)
+TextButton_5.Size = UDim2.new(0, 97, 0, 50)
+TextButton_5.Font = Enum.Font.Fantasy
+TextButton_5.Text = "Invisible"
+TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+TextButton_5.MouseButton1Down:connect(function()
+local player = game.Players.LocalPlayer
+position     = player.Character.HumanoidRootPart.Position
+wait(0.1)
+player.Character:MoveTo(position + Vector3.new(0, 1000000, 0))
+wait(0.1)
+humanoidrootpart = player.Character.HumanoidRootPart:clone()
+wait(0.1)
+player.Character.HumanoidRootPart:Destroy()
+humanoidrootpart.Parent = player.Character
+player.Character:MoveTo(position)
+wait()
+-- Remove this if you want to see yourself (others still won't see you)
+game.Players.LocalPlayer.Character.Torso.Transparency = 1
+game.Players.LocalPlayer.Character.Head.Transparency  = 1
+game.Players.LocalPlayer.Character["Left Arm"].Transparency = 1
+game.Players.LocalPlayer.Character["Right Arm"].Transparency = 1
+game.Players.LocalPlayer.Character["Left Leg"].Transparency = 1
+game.Players.LocalPlayer.Character["Right Leg"].Transparency = 1
+game.Players.LocalPlayer.Character.Humanoid:RemoveAccessories()
+game.Players.LocalPlayer.Character.Head.face:Remove()
+end)
+
+TextButton_6.Parent = Frame
+TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.Position = UDim2.new(0, 0, 0.179321483, 0)
+TextButton_6.Size = UDim2.new(0, 77, 0, 50)
+TextButton_6.Font = Enum.Font.Fantasy
+TextButton_6.Text = "Super Punch"
+TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14.000
+TextButton_6.TextWrapped = true
+TextButton_6.MouseButton1Down:connect(function()
+mainRemotes = game.ReplicatedStorage meleeRemote = mainRemotes['meleeEvent'] mouse = game.Players.LocalPlayer:GetMouse() punching = false cooldown = false function punch() cooldown = true local part = Instance.new("Part", game.Players.LocalPlayer.Character) part.Transparency = 1 part.Size = Vector3.new(5, 2, 3) part.CanCollide = false local w1 = Instance.new("Weld", part) w1.Part0 = game.Players.LocalPlayer.Character.Torso w1.Part1 = part w1.C1 = CFrame.new(0,0,2) part.Touched:connect(function(hit) if game.Players:FindFirstChild(hit.Parent.Name) then local plr = game.Players:FindFirstChild(hit.Parent.Name) if plr.Name ~= game.Players.LocalPlayer.Name then part:Destroy() for i = 1,100 do meleeRemote:FireServer(plr) end end end end) wait(1) cooldown = false part:Destroy() end mouse.KeyDown:connect(function(key) if cooldown == false then if key:lower() == "f" then punch() end end end)
+end)
+
+
+
+TextButton_7.Parent = Frame
+TextButton_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.Position = UDim2.new(0.217494085, 0, 0.179321483, 0)
+TextButton_7.Size = UDim2.new(0, 73, 0, 50)
+TextButton_7.Font = Enum.Font.Fantasy
+TextButton_7.Text = "Guns"
+TextButton_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.TextScaled = true
+TextButton_7.TextSize = 14.000
+TextButton_7.TextWrapped = true
+TextButton_7.MouseButton1Down:connect(function()
+for i,v in pairs(Workspace.Prison_ITEMS.giver:GetChildren()) do
+ 
+lol = Workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
+print(lol)
+end
+end)
+
+TextButton_8.Parent = Frame
+TextButton_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_8.Position = UDim2.new(0.411347508, 0, 0.179321483, 0)
+TextButton_8.Size = UDim2.new(0, 77, 0, 50)
+TextButton_8.Font = Enum.Font.Fantasy
+TextButton_8.Text = "Taser Bypass"
+TextButton_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 14.000
+TextButton_8.TextWrapped = true
+TextButton_8.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.ClientInputHandler.Disabled = true
+   game.Players.LocalPlayer.CharacterAdded:connect(function()
+   game.Workspace:WaitForChild(game.Players.LocalPlayer.Name)
+   game.Players.LocalPlayer.Character.ClientInputHandler.Disabled = true
+   end)
+   local message = Instance.new("Message",game.Workspace)
+   message.Text = 'Made By Legion Hub'
+   wait(2)
+   message:Destroy()
+end)
+
+TextButton_9.Parent = Frame
+TextButton_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_9.Position = UDim2.new(0.607564986, 0, 0.179321483, 0)
+TextButton_9.Size = UDim2.new(0, 62, 0, 50)
+TextButton_9.Font = Enum.Font.Fantasy
+TextButton_9.Text = "Fling"
+TextButton_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_9.TextScaled = true
+TextButton_9.TextSize = 14.000
+TextButton_9.TextWrapped = true
+TextButton_9.MouseButton1Down:connect(function()
+power = 300 -- change this to make it more or less powerful
+
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.Torso.CanCollide = false
+game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+end)
+
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+end)
+
+TextButton_10.Parent = Frame
+TextButton_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_10.Position = UDim2.new(0.770685554, 0, 0.179321483, 0)
+TextButton_10.Size = UDim2.new(0, 97, 0, 50)
+TextButton_10.Font = Enum.Font.Fantasy
+TextButton_10.Text = "Reviz Admin "
+TextButton_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_10.TextScaled = true
+TextButton_10.TextSize = 14.000
+TextButton_10.TextWrapped = true
+TextButton_10.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/KNUzQPYS",true))()
+end)
+
+TextButton_11.Parent = Frame
+TextButton_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_11.Position = UDim2.new(0, 0, 0.276252031, 0)
+TextButton_11.Size = UDim2.new(0, 77, 0, 50)
+TextButton_11.Font = Enum.Font.Fantasy
+TextButton_11.Text = "Fast M9"
+TextButton_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_11.TextScaled = true
+TextButton_11.TextSize = 14.000
+TextButton_11.TextWrapped = true
+TextButton_11.MouseButton1Down:connect(function()
+local Player = game.Players.LocalPlayer.Name
+local Gun = "M9" -- < -- Gun Name
+local Run = game:GetService("RunService")
+
+Gun = game.Players[Player].Character[Gun]
+local Mouse = game.Players.LocalPlayer:GetMouse()
+local Down = false
+local Sound = Gun.Handle.FireSound
+
+function CreateRay(Point_A, Point_B)
+local Ray = Ray.new(Point_A, (Point_B - Point_A).Unit * (2 ^ 31 - 1))
+local Part, Pos = workspace:FindPartOnRay(Ray, game.Players.LocalPlayer.Character)
+local Dist = (Point_A - Pos).Magnitude
+local CFrame = CFrame.new(Point_A, Pos) * CFrame.new(0, 0, -Dist / 2)
+
+return CFrame, Dist, Ray
+end
+
+function FireLaser(target)
+coroutine.resume(coroutine.create(function()
+local C, D, R = CreateRay(Gun.Muzzle.CFrame.p, target.CFrame.p)
+local Bullet = Instance.new("Part", Gun)
+Bullet.BrickColor = BrickColor.Yellow()
+Bullet.Material = "Neon"
+Bullet.Anchored = true
+Bullet.CanCollide = false
+Bullet.Size = Vector3.new(0.2, 0.2, D)
+Bullet.CFrame = C
+
+local bulletTable = {}
+table.insert(bulletTable, {
+Hit = target,
+Distance = D,
+Cframe = C,
+RayObject = R
+})
+
+game.ReplicatedStorage.ShootEvent:FireServer(bulletTable, Gun)
+local C = Sound:Clone()
+C.Parent = Gun
+C:Play()
+wait(0.05)
+Bullet:Remove()
+end))
+end
+
+Mouse.Button1Down:Connect(function()
+Down = true
+end)
+
+
+Mouse.Button1Up:Connect(function()
+Down = false
+end)
+
+while Run.Stepped:wait() do
+if Down == true then
+game.ReplicatedStorage.SoundEvent:FireServer(Sound, Gun)
+FireLaser(Mouse.Target)
+end
+end
+end)
+
+TextButton_12.Parent = Frame
+TextButton_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_12.Position = UDim2.new(0.217494085, 0, 0.276252031, 0)
+TextButton_12.Size = UDim2.new(0, 73, 0, 50)
+TextButton_12.Font = Enum.Font.Fantasy
+TextButton_12.Text = "Fast Taze"
+TextButton_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_12.TextScaled = true
+TextButton_12.TextSize = 14.000
+TextButton_12.TextWrapped = true
+TextButton_12.MouseButton1Down:connect(function()
+local Player = game.Players.LocalPlayer.Name
+local Gun = "Taser" -- < -- Gun Name
+local Run = game:GetService("RunService")
+
+Gun = game.Players[Player].Character[Gun]
+local Mouse = game.Players.LocalPlayer:GetMouse()
+local Down = false
+local Sound = Gun.Handle.FireSound
+
+function CreateRay(Point_A, Point_B)
+local Ray = Ray.new(Point_A, (Point_B - Point_A).Unit * (2 ^ 31 - 1))
+local Part, Pos = workspace:FindPartOnRay(Ray, game.Players.LocalPlayer.Character)
+local Dist = (Point_A - Pos).Magnitude
+local CFrame = CFrame.new(Point_A, Pos) * CFrame.new(0, 0, -Dist / 2)
+
+return CFrame, Dist, Ray
+end
+
+function FireLaser(target)
+coroutine.resume(coroutine.create(function()
+local C, D, R = CreateRay(Gun.Muzzle.CFrame.p, target.CFrame.p)
+local Bullet = Instance.new("Part", Gun)
+Bullet.BrickColor = BrickColor.Yellow()
+Bullet.Material = "Neon"
+Bullet.Anchored = true
+Bullet.CanCollide = false
+Bullet.Size = Vector3.new(0.2, 0.2, D)
+Bullet.CFrame = C
+
+local bulletTable = {}
+table.insert(bulletTable, {
+Hit = target,
+Distance = D,
+Cframe = C,
+RayObject = R
+})
+
+game.ReplicatedStorage.ShootEvent:FireServer(bulletTable, Gun)
+local C = Sound:Clone()
+C.Parent = Gun
+C:Play()
+wait(0.05)
+Bullet:Remove()
+end))
+end
+
+Mouse.Button1Down:Connect(function()
+Down = true
+end)
+
+
+Mouse.Button1Up:Connect(function()
+Down = false
+end)
+
+while Run.Stepped:wait() do
+if Down == true then
+game.ReplicatedStorage.SoundEvent:FireServer(Sound, Gun)
+FireLaser(Mouse.Target)
+end
+end
+end)
+
+TextButton_13.Parent = Frame
+TextButton_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_13.Position = UDim2.new(0.411347508, 0, 0.276252031, 0)
+TextButton_13.Size = UDim2.new(0, 77, 0, 50)
+TextButton_13.Font = Enum.Font.Fantasy
+TextButton_13.Text = "Fast AK"
+TextButton_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_13.TextScaled = true
+TextButton_13.TextSize = 14.000
+TextButton_13.TextWrapped = true
+TextButton_13.MouseButton1Down:connect(function()
+local Player = game.Players.LocalPlayer.Name
+local Gun = "AK47" -- < -- Gun Name
+local Run = game:GetService("RunService")
+
+Gun = game.Players[Player].Character[Gun]
+local Mouse = game.Players.LocalPlayer:GetMouse()
+local Down = false
+local Sound = Gun.Handle.FireSound
+
+function CreateRay(Point_A, Point_B)
+local Ray = Ray.new(Point_A, (Point_B - Point_A).Unit * (2 ^ 31 - 1))
+local Part, Pos = workspace:FindPartOnRay(Ray, game.Players.LocalPlayer.Character)
+local Dist = (Point_A - Pos).Magnitude
+local CFrame = CFrame.new(Point_A, Pos) * CFrame.new(0, 0, -Dist / 2)
+
+return CFrame, Dist, Ray
+end
+
+function FireLaser(target)
+coroutine.resume(coroutine.create(function()
+local C, D, R = CreateRay(Gun.Muzzle.CFrame.p, target.CFrame.p)
+local Bullet = Instance.new("Part", Gun)
+Bullet.BrickColor = BrickColor.Yellow()
+Bullet.Material = "Neon"
+Bullet.Anchored = true
+Bullet.CanCollide = false
+Bullet.Size = Vector3.new(0.2, 0.2, D)
+Bullet.CFrame = C
+
+local bulletTable = {}
+table.insert(bulletTable, {
+Hit = target,
+Distance = D,
+Cframe = C,
+RayObject = R
+})
+
+game.ReplicatedStorage.ShootEvent:FireServer(bulletTable, Gun)
+local C = Sound:Clone()
+C.Parent = Gun
+C:Play()
+wait(0.05)
+Bullet:Remove()
+end))
+end
+
+Mouse.Button1Down:Connect(function()
+Down = true
+end)
+
+
+Mouse.Button1Up:Connect(function()
+Down = false
+end)
+
+while Run.Stepped:wait() do
+if Down == true then
+game.ReplicatedStorage.SoundEvent:FireServer(Sound, Gun)
+FireLaser(Mouse.Target)
+end
+end
+end)
+
+TextButton_14.Parent = Frame
+TextButton_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_14.Position = UDim2.new(0.607564986, 0, 0.276252031, 0)
+TextButton_14.Size = UDim2.new(0, 62, 0, 50)
+TextButton_14.Font = Enum.Font.Fantasy
+TextButton_14.Text = "Kill All"
+TextButton_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_14.TextScaled = true
+TextButton_14.TextSize = 14.000
+TextButton_14.TextWrapped = true
+TextButton_14.MouseButton1Down:connect(function()
+workspace.Remote.TeamEvent:FireServer("Medium stone grey")
+
+game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP) 
+
+wait(0.5)
+function kill(a)
+local A_1 =
+{
+[1] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-391.152252, 8.65560055, -83.2166901)),
+["Distance"] = 3.2524313926697,
+["Cframe"] = CFrame.new(840.310791, 101.334137, 2267.87988, 0.0636406094, 0.151434347, -0.986416459, 0, 0.988420188, 0.151741937, 0.997972965, -0.00965694897, 0.0629036576),
+["Hit"] = a.Character.Head
+},
+  [2] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-392.481476, -8.44939327, -76.7261353)),
+["Distance"] = 3.2699294090271,
+["Cframe"] = CFrame.new(840.290466, 101.184189, 2267.93506, 0.0964837447, 0.0589403138, -0.993587971, 4.65661287e-10, 0.998245299, 0.0592165813, 0.995334625, -0.00571343815, 0.0963144377),
+["Hit"] = a.Character.Head
+},
+[3] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-389.21701, -2.50536323, -92.2163162)),
+["Distance"] = 3.1665518283844,
+["Cframe"] = CFrame.new(840.338867, 101.236496, 2267.80371, 0.0166504811, 0.0941716284, -0.995416701, 1.16415322e-10, 0.995554805, 0.0941846818, 0.999861419, -0.00156822044, 0.0165764652),
+["Hit"] = a.Character.Head
+},
+[4] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-393.353973, 3.13988972, -72.5452042)),
+["Distance"] = 3.3218522071838,
+["Cframe"] = CFrame.new(840.277222, 101.285957, 2267.9707, 0.117109694, 0.118740402, -0.985994935, -1.86264515e-09, 0.992826641, 0.119563118, 0.993119001, -0.0140019981, 0.116269611),
+["Hit"] = a.Character.Head
+},
+[5] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-390.73172, 3.2097764, -85.5477524)),
+["Distance"] = 3.222757101059,
+["Cframe"] = CFrame.new(840.317993, 101.286423, 2267.86035, 0.0517584644, 0.123365127, -0.991010666, 0, 0.992340803, 0.123530701, 0.99865967, -0.00639375951, 0.0513620302),
+["Hit"] = a.Character.Head
+}
+}
+local A_2 = game.Players.LocalPlayer.Backpack["Remington 870"]
+local Event = game:GetService("ReplicatedStorage").ShootEvent
+Event:FireServer(A_1, A_2)
+Event:FireServer(A_1, A_2)
+end
+
+for i,v in pairs(game.Players:GetChildren())do
+if v.Name ~= game.Players.LocalPlayer.Name then
+kill(v)
+end
+end
+wait(1)
+workspace.Remote.TeamEvent:FireServer("Bright orange")
+end)
+
+TextButton_15.Parent = Frame
+TextButton_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_15.Position = UDim2.new(0.770685554, 0, 0.276252031, 0)
+TextButton_15.Size = UDim2.new(0, 97, 0, 50)
+TextButton_15.Font = Enum.Font.Fantasy
+TextButton_15.Text = "BTools"
+TextButton_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_15.TextScaled = true
+TextButton_15.TextSize = 14.000
+TextButton_15.TextWrapped = true
+TextButton_15.MouseButton1Down:connect(function()
+local tool1   = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+tool1.BinType = "Hammer"
+end)
+
+TextButton_16.Parent = Frame
+TextButton_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_16.Position = UDim2.new(0, 0, 0.369951546, 0)
+TextButton_16.Size = UDim2.new(0, 77, 0, 50)
+TextButton_16.Font = Enum.Font.Fantasy
+TextButton_16.Text = "Speed"
+TextButton_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_16.TextScaled = true
+TextButton_16.TextSize = 14.000
+TextButton_16.TextWrapped = true
+TextButton_16.MouseButton1Down:connect(function()
+Speed = "100" -- Change to how fast you want to go
+
+player = game.Players.LocalPlayer.Character
+power = "WalkSpeed"
+player.Humanoid[power] = Speed
+wait()
+player.HumanoidRootPart.CustomPhysicalProperties = PhysicalProperties.new(9e99, 9e99, 9e99, 9e99, 9e99)
+wait()
+repeat
+game.Workspace.Gravity = 1000
+wait()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 287.5
+wait()
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+end)
+
+TextButton_17.Parent = Frame
+TextButton_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_17.Position = UDim2.new(0.217494085, 0, 0.369951546, 0)
+TextButton_17.Size = UDim2.new(0, 73, 0, 50)
+TextButton_17.Font = Enum.Font.Fantasy
+TextButton_17.Text = "Respawn"
+TextButton_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_17.TextScaled = true
+TextButton_17.TextSize = 14.000
+TextButton_17.TextWrapped = true
+TextButton_17.MouseButton1Down:connect(function()
+local A_1 = "\66\114\111\121\111\117\98\97\100\100"
+local Event = game:GetService("Workspace").Remote.loadchar
+Event:InvokeServer(A_1)
+end)
+
+TextButton_18.Parent = Frame
+TextButton_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_18.Position = UDim2.new(0.411347508, 0, 0.369951546, 0)
+TextButton_18.Size = UDim2.new(0, 77, 0, 50)
+TextButton_18.Font = Enum.Font.Fantasy
+TextButton_18.Text = "Prison"
+TextButton_18.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_18.TextScaled = true
+TextButton_18.TextSize = 14.000
+TextButton_18.TextWrapped = true
+TextButton_18.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(918.77,100,2379.07)
+end)
+
+TextButton_19.Parent = Frame
+TextButton_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_19.Position = UDim2.new(0.607564986, 0, 0.369951546, 0)
+TextButton_19.Size = UDim2.new(0, 62, 0, 50)
+TextButton_19.Font = Enum.Font.Fantasy
+TextButton_19.Text = "Yard"
+TextButton_19.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_19.TextScaled = true
+TextButton_19.TextSize = 14.000
+TextButton_19.TextWrapped = true
+TextButton_19.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(779.87,98,2458.93)
+end)
+
+TextButton_20.Parent = Frame
+TextButton_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_20.Position = UDim2.new(0.770685554, 0, 0.369951546, 0)
+TextButton_20.Size = UDim2.new(0, 97, 0, 50)
+TextButton_20.Font = Enum.Font.Fantasy
+TextButton_20.Text = "Crim Base"
+TextButton_20.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_20.TextScaled = true
+TextButton_20.TextSize = 14.000
+TextButton_20.TextWrapped = true
+TextButton_20.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943.46,94.13,2063.63)
+end)
+
+TextButton_21.Parent = Frame
+TextButton_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_21.Position = UDim2.new(0, 0, 0.470113099, 0)
+TextButton_21.Size = UDim2.new(0, 77, 0, 50)
+TextButton_21.Font = Enum.Font.Fantasy
+TextButton_21.Text = "Bring All"
+TextButton_21.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_21.TextScaled = true
+TextButton_21.TextSize = 14.000
+TextButton_21.TextWrapped = true
+TextButton_21.MouseButton1Down:connect(function()
+workspace.Remote.TeamEvent:FireServer("Bright blue")
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 2 - currentamount >= #game.Players:GetPlayers() * 6
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+
+wait()
+
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(.1)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+for i, v in pairs(game.Players:GetPlayers()) do
+if v and v.Name ~= game.Players.LocalPlayer.Name then
+  
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+  
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace.Terrain
+  wait()
+  v.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.rightVector)
+
+end
+wait(0.01)
+
+end
+end)
+
+TextButton_22.Parent = Frame
+TextButton_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_22.Position = UDim2.new(0.217494085, 0, 0.470113099, 0)
+TextButton_22.Size = UDim2.new(0, 73, 0, 50)
+TextButton_22.Font = Enum.Font.Fantasy
+TextButton_22.Text = "FE Drill"
+TextButton_22.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_22.TextScaled = true
+TextButton_22.TextSize = 14.000
+TextButton_22.TextWrapped = true
+TextButton_22.MouseButton1Down:connect(function()
+workspace.Remote.TeamEvent:FireServer("Bright blue")
+
+local toolamount = 80 -- How long the tornado is
+local tornadosize = 1 -- The size of how big the opening of the tornado is
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+for index, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+        tool.Handle.Massless = false
+        tool.Grip = CFrame.new(Vector3.new(0, -index * .1, 0)) * CFrame.Angles(math.rad(90), 0, math.tan(index * 0.5))
+        tool.Parent = LocalPlayer.Character
+        if tool.Handle:FindFirstChild("Mesh") ~= nil then
+            tool.Handle.Mesh:Destroy()
+        end
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+end)
+
+TextButton_23.Parent = Frame
+TextButton_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_23.Position = UDim2.new(0.411347508, 0, 0.470113099, 0)
+TextButton_23.Size = UDim2.new(0, 77, 0, 50)
+TextButton_23.Font = Enum.Font.Fantasy
+TextButton_23.Text = "Big Bowl"
+TextButton_23.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_23.TextScaled = true
+TextButton_23.TextSize = 14.000
+TextButton_23.TextWrapped = true
+TextButton_23.MouseButton1Down:connect(function()
+workspace.Remote.TeamEvent:FireServer("Bright blue")
+
+local toolamount = 250 -- How much covered the bowl is
+local bowlsize = 20 -- How big the bowl is
+
+
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+if tool:IsA("Tool") then
+tool.Parent = LocalPlayer
+end
+end
+LocalPlayer.Character:ClearAllChildren()
+local char = Instance.new("Model", workspace)
+table.insert(characters, char)
+Instance.new("Humanoid", char)
+LocalPlayer.Character = char
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+char:Destroy()
+end
+for index, tool in pairs(LocalPlayer:GetChildren()) do
+if tool:IsA("Tool") then
+tool.Parent = LocalPlayer.Backpack
+tool.Handle.Massless = true
+tool.Grip = CFrame.new(Vector3.new(math.sin(index * 0.1), bowlsize, 0)) * CFrame.Angles(math.sin(index * 0.1), index, 0)
+tool.Parent = LocalPlayer.Character
+if tool.Handle:FindFirstChild("Mesh") ~= nil then
+tool.Handle.Mesh:Destroy()
+end
+end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+LocalPlayer.Character:FindFirstChild("Humanoid").HipHeight = bowlsize
+end)
+
+TextButton_24.Parent = Frame
+TextButton_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_24.Position = UDim2.new(0.607564986, 0, 0.470113099, 0)
+TextButton_24.Size = UDim2.new(0, 166, 0, 50)
+TextButton_24.Font = Enum.Font.Fantasy
+TextButton_24.Text = "Lag Server"
+TextButton_24.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_24.TextScaled = true
+TextButton_24.TextSize = 14.000
+TextButton_24.TextWrapped = true
+TextButton_24.MouseButton1Down:connect(function()
+while true do
+workspace.Remote.TeamEvent:FireServer("Bright blue")
+
+for i = 10,500 do
+    for i,v in pairs(Workspace.Prison_ITEMS.clothes:GetChildren()) do
+ 
+lol = Workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
+print(lol)
+end
+end
+end
+end)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.Position = UDim2.new(0, 0, 0.568659127, 0)
+TextLabel_2.Size = UDim2.new(0, 423, 0, 50)
+TextLabel_2.Font = Enum.Font.Code
+TextLabel_2.Text = "Created by Legion Official#8325"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+
+TextButton_25.Parent = Frame
+TextButton_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_25.Position = UDim2.new(0, 0, 0.667205155, 0)
+TextButton_25.Size = UDim2.new(0, 423, 0, 50)
+TextButton_25.Font = Enum.Font.Code
+TextButton_25.Text = "Powered by Legion Hub"
+TextButton_25.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_25.TextScaled = true
+TextButton_25.TextSize = 14.000
+TextButton_25.TextWrapped = true
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.Position = UDim2.new(0, 0, 0.762520194, 0)
+TextLabel_3.Size = UDim2.new(0, 423, 0, 147)
+TextLabel_3.Font = Enum.Font.Cartoon
+TextLabel_3.Text = "Please don't share the script without permission from the owner."
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
